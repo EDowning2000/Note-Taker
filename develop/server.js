@@ -7,8 +7,8 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-const apiRoutes = require("./routes/apiRoutes");
-const htmlRoutes = require("./routes/htmlRoutes");
+const apiRoutes = require("./routes/apiroutes");
+const htmlRoutes = require("./routes/htmlroutes");
 
 app.use(apiRoutes);
 app.use(htmlRoutes);
