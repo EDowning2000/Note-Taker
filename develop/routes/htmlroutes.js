@@ -1,15 +1,13 @@
-const express = require('express')
-const fs = require('fs')
-const router = express.Router()
-const notes = require ("../db/db.json")
-const path = require('path')
+var path = require("path");
+var express = require("express");
+var router = express.Router();
 
-router.get("/notes", function(req,res){
-  res.sendFile(path.join(__dirname, "../public/notes.html"))
+router.get("/notes", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/notes.html"));
+  });
+
+router.get("*", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/index.html"));
 });
-
-router.get('*', function (req,res){
-  res.sendFile(path.join(__dirname, "../publix/index.html"))
-})
 
 module.exports = router;
