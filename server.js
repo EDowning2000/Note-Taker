@@ -22,7 +22,7 @@ app.get('/api/notes', (req, res)=>{
 }) //sends the note data response from the db file 
 
 app.post('/api/notes',(req,res)=>{
-  noteData.push(req.body):
+  noteData.push(req.body)
   noteData.forEach((note,i)=>{
     note.id = i +1
   });
