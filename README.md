@@ -1,7 +1,7 @@
 # Note-Taker
 # Note Taker
 
-  ![](https://img.shields.io/badge/License-${data.license}-important)
+  ![](https://img.shields.io/badge/License-MIT-important)
 
   # Description
   This app allows a user to save, delete, and store notes for current or future use. 
