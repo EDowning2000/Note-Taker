@@ -34,12 +34,12 @@ app.post('/api/notes',(req,res)=>{
   res.json(noteData);
 })
 
-app.delete('/api/notes:id', (req,res)=>{
+app.delete('/api/notes/:id', (req,res)=>{
   let filtered= noteData.filter(note=>note.id !==parseInt(req.params.id));
-
+  console.log(filtered)
   fs.writeFileSync('./develop/db/db.json', JSON.stringify(filtered))
 
-  res.json(filtered)
+  res.redirect("localhost:4040/notes");
 })
 
 
